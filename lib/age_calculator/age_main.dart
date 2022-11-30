@@ -432,16 +432,20 @@ class _AgeMainState extends State<AgeMain> {
                       ),
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: FloatingActionButton(
-                      onPressed: null,
-                      child: Text("More"),
-                    ),
-                  )
+                  sb,
+
                 ],
               ),
             ),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: FloatingActionButton(
+                onPressed: null,
+                child: Text("More"),
+                //Todo:
+                // Take screen shot only of the card widget
+              ),
+            )
           ],
         ),
       ),
