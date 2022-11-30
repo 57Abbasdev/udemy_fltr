@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:udemy_fltr/age_calculator/age_main.dart';
 
-void main(){
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
@@ -10,10 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       color: Colors.amber,
       debugShowCheckedModeBanner: false,
-
       home: HomePage(),
     );
   }
@@ -24,7 +24,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.white),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AgeMain()));
+                },
+                child: Text("Age Calculator"),
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
-
