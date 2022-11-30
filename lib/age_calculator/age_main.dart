@@ -422,7 +422,7 @@ class _AgeMainState extends State<AgeMain> {
                             height: 5,
                           ),
                           Text(
-                            "${(todayDate.difference(dobDate).inSeconds).floor()}",
+                            "${(todayDate.difference(dobDate).inMinutes).floor()}",
                             style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
