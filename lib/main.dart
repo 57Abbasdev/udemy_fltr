@@ -28,6 +28,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Colors.white),
       body: Column(
         children: [
+          const Image(height: 100,
+              image: AssetImage("assets/images/oktem.jpg")),
+          Image.asset("assets/images/oktem.jpg"),
           Row(
             children: [
               ElevatedButton(
@@ -36,7 +39,14 @@ class HomePage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => AgeMain()));
                 },
                 child: Text("Age Calculator"),
-              )
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AgeMain()));
+                },
+                child: Text(""),
+              ),
             ],
           )
         ],
