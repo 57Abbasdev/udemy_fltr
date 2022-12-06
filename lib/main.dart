@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_fltr/age_calculator/age_main.dart';
+import 'package:udemy_fltr/by_angela/ball_ques.dart';
+import 'package:udemy_fltr/by_angela/dice_rolling.dart';
+import 'package:udemy_fltr/by_angela/mi_card.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,25 +31,34 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Colors.white),
       body: Column(
         children: [
-          const Image(height: 100,
-              image: AssetImage("assets/images/oktem.jpg")),
-          Image.asset("assets/images/oktem.jpg"),
+          InkWell(
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const MiCard())),
+            child: const Image(
+                height: 100, image: AssetImage("assets/images/oktem.jpg")),
+          ),
           Row(
             children: [
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AgeMain()));
+                      MaterialPageRoute(builder: (context) => const AgeMain()));
                 },
-                child: Text("Age Calculator"),
+                child: const Text("Age Calculator"),
               ),
-              ElevatedButton(
+              TextButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AgeMain()));
+                      MaterialPageRoute(builder: (context) => const BallQ()));
                 },
-                child: Text(""),
+                child: const Text("Ball Q"),
               ),
+              OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DiceRoll()));
+                  },
+                  child: Text("Dice Roll")),
             ],
           )
         ],

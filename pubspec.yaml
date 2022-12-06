@@ -18,21 +18,20 @@ dependencies:
   cupertino_icons: ^1.0.2
   intl: ^0.17.0
   age: ^0.0.1
+  google_fonts: ^3.0.1
+  url_launcher: ^6.1.7
+  lottie: ^2.0.0
 
+
+
+
+  animated_text_kit: ^4.2.2
   flutter_app_name: ^0.1.1
-  flutter_launcher_icons: ^0.11.0
 
-#  add true in which platforms you want to add this package
-# rerun with the package name to work fine
-
-flutter_icons:
-  image_path: "assets/images/wa.png"
-  android: true
-  ios: true
 
 
 flutter_app_name:
-  name: "Udemy Flutter"
+  name: "Abbas Bhatti"
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +44,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/dice/
 
   #   - family: Schyler
   #     fonts:
