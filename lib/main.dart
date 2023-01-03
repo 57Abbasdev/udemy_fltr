@@ -3,6 +3,9 @@ import 'package:udemy_fltr/age_calculator/age_main.dart';
 import 'package:udemy_fltr/by_angela/ball_ques.dart';
 import 'package:udemy_fltr/by_angela/dice_rolling.dart';
 import 'package:udemy_fltr/by_angela/mi_card.dart';
+import 'package:udemy_fltr/by_angela/xylophone.dart';
+
+import 'by_angela/quiz/quiz.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,10 +17,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       color: Colors.amber,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Quiz(),
     );
   }
 }
@@ -35,9 +38,9 @@ class HomePage extends StatelessWidget {
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const MiCard())),
             child: const Image(
-                height: 100, image: AssetImage("assets/images/oktem.jpg")),
+                height: 100, image: AssetImage("assets/images/abbas.jpg")),
           ),
-          Row(
+          Wrap(
             children: [
               ElevatedButton(
                 onPressed: () {
@@ -59,6 +62,18 @@ class HomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => DiceRoll()));
                   },
                   child: Text("Dice Roll")),
+              OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Xylophone()));
+                  },
+                  child: Text('Audio')),
+              OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Quiz()));
+                  },
+                  child: Text('Quiz')),
             ],
           )
         ],

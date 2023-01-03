@@ -8,8 +8,20 @@ class BallQ extends StatefulWidget {
 }
 
 class _BallQState extends State<BallQ> {
+  var ball = 1;
+
   @override
   Widget build(BuildContext context) {
-    return Image(image: AssetImage());
+    return GestureDetector(
+        onTap: () {
+          setState(() {
+            ball++;
+            if(ball>5){
+              ball=1;
+            }
+          });
+
+        },
+        child: Image(image: AssetImage("assets/images/ball/ball$ball.png")));
   }
 }
