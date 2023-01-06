@@ -5,6 +5,8 @@ import 'package:udemy_fltr/by_angela/dice_rolling.dart';
 import 'package:udemy_fltr/by_angela/mi_card.dart';
 import 'package:udemy_fltr/by_angela/xylophone.dart';
 
+import 'by_angela/bmi_calculator/bmi.dart';
+import 'by_angela/destini/destini.dart';
 import 'by_angela/quiz/quiz.dart';
 
 void main() {
@@ -17,10 +19,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  const MaterialApp(
       color: Colors.amber,
       debugShowCheckedModeBanner: false,
-      home: Quiz(),
+      home: Bmi(),
     );
   }
 }
